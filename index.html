@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="tl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONTROL // Modern Streetwear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            lime: '#CCFF00',
+                            black: '#0A0A0A',
+                            dark: '#141414',
+                            gray: '#222222',
+                            light: '#F5F5F5'
+                        }
+                    },
+                    fontFamily: {
+                        brutal: ['"Archivo Black"', 'sans-serif'],
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .brutal-shadow {
+            box-shadow: 4px 4px 0px 0px #CCFF00;
+        }
+        .brutal-shadow-black {
+            box-shadow: 6px 6px 0px 0px #0A0A0A;
+        }
+        .brutal-shadow-white {
+            box-shadow: 6px 6px 0px 0px #FFFFFF;
+        }
+        .text-outline {
+            -webkit-text-stroke: 2px #CCFF00;
+            color: transparent;
+        }
+        .text-outline-white {
+            -webkit-text-stroke: 2px #FFFFFF;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-brand-light font-sans selection:bg-brand-lime selection:text-brand-black">
+
+    <!-- Announcement Bar -->
+    <div class="bg-brand-lime text-brand-black font-brutal text-xs py-2 overflow-hidden whitespace-nowrap uppercase tracking-widest border-b-2 border-brand-black">
+        <div class="inline-block animate-[marquee_20s_linear_infinite]">
+            <span>⚡ FREE SHIPPING SA MGA ORDERS NA HIGIT ₱2,500 USE CODE: KONTROL2024 ⚡</span>
+            <span class="mx-8">⚡ NEW DROP AVAILABLE NOW ⚡</span>
+            <span class="mx-8">⚡ LIMITED STOCKS ONLY ⚡</span>
+            <span class="mx-8">⚡ FREE SHIPPING SA MGA ORDERS NA HIGIT ₱2,500 USE CODE: KONTROL2024 ⚡</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-brand-black/90 backdrop-blur-md border-b-2 border-brand-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <a href="#" class="font-brutal text-2xl sm:text-3xl tracking-tighter text-white hover:text-brand-lime transition-colors">
+                    KONTROL<span class="text-brand-lime">.</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-6 font-semibold uppercase text-sm tracking-wider">
+                    <a href="#shop" class="hover:text-brand-lime transition-colors">Shop</a>
+                    <a href="#drops" class="hover:text-brand-lime transition-colors">Drops</a>
+                    <a href="#about" class="hover:text-brand-lime transition-colors">Manifesto</a>
+                </nav>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="toggleSearch()" class="p-2 text-white hover:text-brand-lime transition-colors">
+                    <i class="fa-solid fa-magnifying-glass text-xl"></i>
+                </button>
+                <button onclick="toggleCart()" class="relative bg-brand-lime text-brand-black font-brutal px-4 py-2 border-2 border-brand-black brutal-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" class="bg-brand-black text-brand-lime text-xs px-1.5 py-0.5 rounded-full">0</span>
+                </button>
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-white hover:text-brand-lime transition-colors">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Modal -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-brand-black/95 flex flex-col justify-center items-center gap-6 text-2xl font-brutal uppercase hidden">
+        <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-white hover:text-brand-lime text-3xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#shop" onclick="toggleMobileMenu()" class="hover:text-brand-lime">Shop</a>
+        <a href="#drops" onclick="toggleMobileMenu()" class="hover:text-brand-lime">Drops</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="hover:text-brand-lime">Manifesto</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden border-b-2 border-brand-gray py-16 lg:py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-block bg-brand-black text-brand-lime font-brutal text-xs px-3 py-1 border border-brand-lime uppercase tracking-widest">
+                    Collection 004 // Anti-Establishment
+                </div>
+                <h1 class="font-brutal text-4xl sm:text-6xl lg:text-7xl tracking-tighter leading-none uppercase">
+                    I-ANGAT ANG <span class="text-brand-lime">KULTURA.</span>
+                </h1>
+                <p class="text-brand-light/70 text-lg max-w-lg font-sans">
+                    Heavyweight fabrics. Bold oversized cuts. Ginawa para sa mga taong hindi sumusunod sa agos. Kunin ang nararapat sa'yo.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#shop" class="bg-brand-lime text-brand-black font-brutal px-8 py-4 border-2 border-brand-black brutal-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all uppercase tracking-wider text-sm">
+                        Bumili Na <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#drops" class="bg-transparent text-white font-brutal px-8 py-4 border-2 border-white hover:bg-white hover:text-brand-black transition-all uppercase tracking-wider text-sm">
+                        Tingnan ang Drop
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-brand-lime/20 border-2 border-brand-lime transform rotate-2"></div>
+                <div class="relative bg-brand-gray border-2 border-brand-black p-2 brutal-shadow-white">
+                    <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&q=80&w=800" alt="Streetwear Model" class="w-full h-[450px] object-cover filter grayscale contrast-125">
+                    <div class="absolute bottom-4 left-4 bg-brand-black/90 text-brand-lime font-brutal px-4 py-2 border border-brand-lime text-sm">
+                        LIMITED RUN: 500 PCS
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section id="shop" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b-2 border-brand-gray pb-6 gap-4">
+            <div>
+                <span class="text-brand-lime font-brutal text-sm tracking-widest uppercase">Katalog</span>
+                <h2 class="font-brutal text-3xl sm:text-5xl uppercase tracking-tighter mt-1">LATEST PIECES</h2>
+            </div>
+            <!-- Category Filter -->
+            <div class="flex flex-wrap gap-2 font-brutal text-xs">
+                <button onclick="filterProducts('all')" class="filter-btn active bg-brand-lime text-brand-black px-4 py-2 border-2 border-brand-black transition-all">LAHAT</button>
+                <button onclick="filterProducts('hoodie')" class="filter-btn bg-brand-dark text-white px-4 py-2 border-2 border-brand-gray hover:border-brand-lime transition-all">HOODIES</button>
+                <button onclick="filterProducts('tee')" class="filter-btn bg-brand-dark text-white px-4 py-2 border-2 border-brand-gray hover:border-brand-lime transition-all">TEES</button>
+                <button onclick="filterProducts('bottom')" class="filter-btn bg-brand-dark text-white px-4 py-2 border-2 border-brand-gray hover:border-brand-lime transition-all">BOTTOMS</button>
+            </div>
+        </div>
+
+        <!-- Grid -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div class="product-card group bg-brand-dark border-2 border-brand-gray hover:border-brand-lime transition-all duration-300 flex flex-col justify-between" data-category="hoodie">
+                <div class="relative overflow-hidden bg-brand-gray">
+                    <span class="absolute top-3 left-3 z-10 bg-brand-lime text-brand-black font-brutal text-xs px-2.5 py-1 border border-brand-black uppercase">Bagong Labas</span>
+                    <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&q=80&w=600" alt="Heavyweight Hoodie" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 filter contrast-110">
+                    <button onclick="quickView('Chaos Heavyweight Hoodie', '₱2,850', 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&q=80&w=600')" class="absolute bottom-3 right-3 bg-brand-black text-white p-3 border border-white hover:bg-brand-lime hover:text-brand-black hover:border-brand-black transition-all">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="text-xs text-brand-lime font-brutal uppercase tracking-wider mb-1">Hoodie</div>
+                        <h3 class="font-brutal text-xl uppercase tracking-tight text-white mb-2">Chaos Heavyweight Hoodie</h3>
+                        <p class="text-brand-light/60 text-sm mb-4">480GSM French Terry cotton. Distressed edges at cuffs.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-brand-gray">
+                        <span class="font-brutal text-xl text-brand-lime">₱2,850</span>
+                        <button onclick="addToCart('Chaos Heavyweight Hoodie', 2850)" class="bg-brand-lime text-brand-black font-brutal px-4 py-2 text-xs border-2 border-brand-black brutal-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all uppercase">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card group bg-brand-dark border-2 border-brand-gray hover:border-brand-lime transition-all duration-300 flex flex-col justify-between" data-category="tee">
+                <div class="relative overflow-hidden bg-brand-gray">
+                    <span class="absolute top-3 left-3 z-10 bg-red-600 text-white font-brutal text-xs px-2.5 py-1 border border-brand-black uppercase">Mainit</span>
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=600" alt="Graphic Tee" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 filter contrast-110">
+                    <button onclick="quickView('Distorted Truth Boxy Tee', '₱1,450', 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=600')" class="absolute bottom-3 right-3 bg-brand-black text-white p-3 border border-white hover:bg-brand-lime hover:text-brand-black hover:border-brand-black transition-all">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="text-xs text-brand-lime font-brutal uppercase tracking-wider mb-1">Tee</div>
+                        <h3 class="font-brutal text-xl uppercase tracking-tight text-white mb-2">Distorted Truth Boxy Tee</h3>
+                        <p class="text-brand-light/60 text-sm mb-4">Boxy fit, dropped shoulders. Silk-screen acid print on chest.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-brand-gray">
+                        <span class="font-brutal text-xl text-brand-lime">₱1,450</span>
+                        <button onclick="addToCart('Distorted Truth Boxy Tee', 1450)" class="bg-brand-lime text-brand-black font-brutal px-4 py-2 text-xs border-2 border-brand-black brutal-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all uppercase">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card group bg-brand-dark border-2 border-brand-gray hover:border-brand-lime transition-all duration-300 flex flex-col justify-between" data-category="bottom">
+                <div class="relative overflow-hidden bg-brand-gray">
+                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&q=80&w=600" alt="Cargo Pants" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 filter contrast-110">
+                    <button onclick="quickView('Tactical Utility Cargo', '₱3,200', 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&q=80&w=600')" class="absolute bottom-3 right-3 bg-brand-black text-white p-3 border border-white hover:bg-brand-lime hover:text-brand-black hover:border-brand-black transition-all">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="text-xs text-brand-lime font-brutal uppercase tracking-wider mb-1">Bottoms</div>
+                        <h3 class="font-brutal text-xl uppercase tracking-tight text-white mb-2">Tactical Utility Cargo</h3>
+                        <p class="text-brand-light/60 text-sm mb-4">Multi-pocket configuration, adjustable bungee cords at hem.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-brand-gray">
+                        <span class="font-brutal text-xl text-brand-lime">₱3,200</span>
+                        <button onclick="addToCart('Tactical Utility Cargo', 3200)" class="bg-brand-lime text-brand-black font-brutal px-4 py-2 text-xs border-2 border-brand-black brutal-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all uppercase">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card group bg-brand-dark border-2 border-brand-gray hover:border-brand-lime transition-all duration-300 flex flex-col justify-between" data-category="hoodie">
+                <div class="relative overflow-hidden bg-brand-gray">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&q=80&w=600" alt="Zip Hoodie" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 filter contrast-110">
+                    <button onclick="quickView('Subversion Zip-Up', '₱2,990', 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&q=80&w=600')" class="absolute bottom-3 right-3 bg-brand-black text-white p-3 border border-white hover:bg-brand-lime hover:text-brand-black hover:border-brand-black transition-all">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="text-xs text-brand-lime font-brutal uppercase tracking-wider mb-1">Hoodie</div>
+                        <h3 class="font-brutal text-xl uppercase tracking-tight text-white mb-2">Subversion Zip-Up</h3>
+                        <p class="text-brand-light/60 text-sm mb-4">Full zip dual slider, custom metallic hardware, washed finish.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-brand-gray">
+                        <span class="font-brutal text-xl text-brand-lime">₱2,990</span>
+                        <button onclick="addToCart('Subversion Zip-Up', 2990)" class="bg-brand-lime text-brand-black font-brutal px-4 py-2 text-xs border-2 border-brand-black brutal-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all uppercase">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card group bg-brand-dark border-2 border-brand-gray hover:border-brand-lime transition-all duration-300 flex flex-col justify-between" data-category="tee">
+                <div class="relative overflow-hidden bg-brand-gray">
+                    <span class="absolute top-3 left-3 z-10 bg-brand-lime text-brand-black font-brutal text-xs px-2.5 py-1 border border-brand-black uppercase">Sold Out Soon</span>
+                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=600" alt="Basic Tee" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 filter contrast-110">
+                    <button onclick="quickView('Void Minimal Tee', '₱1,250', 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=600')" class="absolute bottom-3 right-3 bg-brand-black text-white p-3 border border-white hover:bg-brand-lime hover:text-brand-black hover:border-brand-black transition-all">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="text-xs text-brand-lime font-brutal uppercase tracking-wider mb-1">Tee</div>
+                        <h3 class="font-brutal text-xl uppercase tracking-tight text-white mb-2">Void Minimal Tee</h3>
+                        <p class="text-brand-light/60 text-sm mb-4">Heavy jersey cotton 300GSM with subtle silicon logo print on nape.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-brand-gray">
+                        <span class="font-brutal text-xl text-brand-lime">₱1,250</span>
+                        <button onclick="addToCart('Void Minimal Tee', 1250)" class="bg-brand-lime text-brand-black font-brutal px-4 py-2 text-xs border-2 border-brand-black brutal-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all uppercase">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card group bg-brand-dark border-2 border-brand-gray hover:border-brand-lime transition-all duration-300 flex flex-col justify-between" data-category="bottom">
+                <div class="relative overflow-hidden bg-brand-gray">
+                    <img src="https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&q=80&w=600" alt="Sweatpants" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 filter contrast-110">
+                    <button onclick="quickView('System Sweatpants', '₱2,400', 'https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&q=80&w=600')" class="absolute bottom-3 right-3 bg-brand-black text-white p-3 border border-white hover:bg-brand-lime hover:text-brand-black hover:border-brand-black transition-all">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="text-xs text-brand-lime font-brutal uppercase tracking-wider mb-1">Bottoms</div>
+                        <h3 class="font-brutal text-xl uppercase tracking-tight text-white mb-2">System Sweatpants</h3>
+                        <p class="text-brand-light/60 text-sm mb-4">Relaxed tapered fit, raw edge details, deep side pockets.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-brand-gray">
+                        <span class="font-brutal text-xl text-brand-lime">₱2,400</span>
+                        <button onclick="addToCart('System Sweatpants', 2400)" class="bg-brand-lime text-brand-black font-brutal px-4 py-2 text-xs border-2 border-brand-black brutal-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all uppercase">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drop Countdown / Banner -->
+    <section id="drops" class="bg-brand-lime text-brand-black py-20 border-y-2 border-brand-black relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="font-brutal text-xs uppercase tracking-widest bg-brand-black text-brand-lime px-3 py-1 border border-brand-black">Susunod Na Drop</span>
+            <h2 class="font-brutal text-4xl sm:text-7xl uppercase tracking-tighter mt-4 mb-6">ANG PAG-AALSA</h2>
+            <p class="font-sans font-bold max-w-xl mx-auto text-lg mb-8">
+                Maghanda para sa pinakamalaking koleksyon ngayong taon. Limitadong piraso lamang bawat disenyo. Walang restock.
+            </p>
+            
+            <!-- Countdown Timers -->
+            <div class="flex justify-center gap-4 sm:gap-8 mb-10 font-brutal">
+                <div class="bg-brand-black text-white p-4 sm:p-6 border-2 border-brand-black brutal-shadow-white min-w-[80px] sm:min-w-[100px]">
+                    <span id="days" class="text-3xl sm:text-5xl block text-brand-lime">03</span>
+                    <span class="text-xs uppercase tracking-wider">Araw</span>
+                </div>
+                <div class="bg-brand-black text-white p-4 sm:p-6 border-2 border-brand-black brutal-shadow-white min-w-[80px] sm:min-w-[100px]">
+                    <span id="hours" class="text-3xl sm:text-5xl block text-brand-lime">14</span>
+                    <span class="text-xs uppercase tracking-wider">Oras</span>
+                </div>
+                <div class="bg-brand-black text-white p-4 sm:p-6 border-2 border-brand-black brutal-shadow-white min-w-[80px] sm:min-w-[100px]">
+                    <span id="minutes" class="text-3xl sm:text-5xl block text-brand-lime">45</span>
+                    <span class="text-xs uppercase tracking-wider">Min</span>
+                </div>
+                <div class="bg-brand-black text-white p-4 sm:p-6 border-2 border-brand-black brutal-shadow-white min-w-[80px] sm:min-w-[100px]">
+                    <span id="seconds" class="text-3xl sm:text-5xl block text-brand-lime">22</span>
+                    <span class="text-xs uppercase tracking-wider">Seg</span>
+                </div>
+            </div>
+
+            <form onsubmit="subscribeNewsletter(event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
+                <input type="email" id="newsletter-email" placeholder="Ilagay ang iyong email..." required class="bg-white text-brand-black px-4 py-3 border-2 border-brand-black focus:outline-none flex-grow font-sans">
+                <button type="submit" class="bg-brand-black text-brand-lime font-brutal px-6 py-3 border-2 border-brand-black hover:bg-brand-dark transition-colors uppercase text-sm">
+                    Mag-abang
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Manifesto Section -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-brand-lime font-brutal text-sm tracking-widest uppercase">Pilosopiya</span>
+                <h2 class="font-brutal text-3xl sm:text-5xl uppercase tracking-tighter mt-1 mb-6">HINDI LANG DAMIT. ISA TONG PAHAYAG.</h2>
+                <p class="text-brand-light/70 font-sans mb-6 text-lg">
+                    Itinayo ang KONTROL sa paniniwala na ang pananamit ay dapat sumasalamin sa iyong pagkatao at paglaban sa mga tradisyonal na pamantayan. Ginagamit namin ang pinakamatibay na tela at malalaking disenyo para sa mga hindi natatakot tumayo.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4 border-t border-brand-gray">
+                    <div>
+                        <div class="font-brutal text-3xl text-brand-lime mb-1">480GSM</div>
+                        <div class="text-xs text-brand-light/60 uppercase tracking-wider">Heavyweight Fabrics</div>
+                    </div>
+                    <div>
+                        <div class="font-brutal text-3xl text-brand-lime mb-1">100%</div>
+                        <div class="text-xs text-brand-light/60 uppercase tracking-wider">Local & Independent</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?auto=format&fit=crop&q=80&w=400" alt="Streetwear detail" class="w-full h-64 object-cover border-2 border-brand-gray filter grayscale contrast-125">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=400" alt="Streetwear detail" class="w-full h-64 object-cover border-2 border-brand-gray filter grayscale contrast-125 mt-8">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t-2 border-brand-gray py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div class="space-y-4">
+                <span class="font-brutal text-2xl tracking-tighter text-white">
+                    KONTROL<span class="text-brand-lime">.</span>
+                </span>
+                <p class="text-brand-light/60 text-sm">
+                    Modern streetwear na gawa para sa mga nagmamay-ari ng sariling kapalaran.
+                </p>
+                <div class="flex gap-4 text-xl">
+                    <a href="#" class="text-white hover:text-brand-lime transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-white hover:text-brand-lime transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="text-white hover:text-brand-lime transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-brutal text-sm uppercase tracking-wider text-brand-lime mb-4">Mabilis na Link</h4>
+                <ul class="space-y-2 text-sm text-brand-light/70">
+                    <li><a href="#shop" class="hover:text-white transition-colors">Lahat ng Produkto</a></li>
+                    <li><a href="#drops" class="hover:text-white transition-colors">Mga Bagong Patak</a></li>
+                    <li><a href="#about" class="hover:text-white transition-colors">Manifesto</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Talaan ng Sukat</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-brutal text-sm uppercase tracking-wider text-brand-lime mb-4">Tulong</h4>
+                <ul class="space-y-2 text-sm text-brand-light/70">
+                    <li><a href="#" class="hover:text-white transition-colors">Katayuan ng Order</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Pagpapadala at Pagbabalik</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">FAQs</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Makipag-ugnayan</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-brutal text-sm uppercase tracking-wider text-brand-lime mb-4">Lokasyon</h4>
+                <p class="text-brand-light/70 text-sm mb-2">
+                    Studio 404, Makati City<br>Metro Manila, Pilipinas
+                </p>
+                <p class="text-brand-lime text-xs font-brutal">
+                    OPEN BY APPOINTMENT ONLY
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-brand-gray text-center text-brand-light/40 text-xs font-sans">
+            &copy; 2024 KONTROL CLOTHING. LAHAT NG KARAPATAN AY NAKAPATALA.
+        </div>
+    </footer>
+
+    <!-- Cart Drawer Modal -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="toggleCart()"></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-brand-dark border-l-2 border-brand-gray flex flex-col justify-between">
+                <div class="p-6 overflow-y-auto">
+                    <div class="flex items-center justify-between pb-6 border-b-2 border-brand-gray">
+                        <h3 class="font-brutal text-xl uppercase tracking-tighter text-white">Shopping Cart</h3>
+                        <button onclick="toggleCart()" class="text-white hover:text-brand-lime text-2xl">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <!-- Cart Items Container -->
+                    <div id="cart-items" class="py-6 space-y-4">
+                        <!-- Dynamically populated or empty state -->
+                        <div id="empty-cart-message" class="text-center py-12 text-brand-light/50 font-sans">
+                            <i class="fa-solid fa-cart-shopping text-4xl mb-3"></i>
+                            <p>Walang laman ang iyong cart.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cart Footer -->
+                <div class="p-6 bg-brand-black border-t-2 border-brand-gray space-y-4">
+                    <div class="flex justify-between items-center font-brutal text-lg">
+                        <span>Kabuuan:</span>
+                        <span id="cart-total" class="text-brand-lime">₱0</span>
+                    </div>
+                    <button onclick="checkout()" class="w-full bg-brand-lime text-brand-black font-brutal py-4 border-2 border-brand-black brutal-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all uppercase text-sm text-center block">
+                        Mag-Checkout Na
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div id="quick-view-modal" class="fixed inset-0 z-50 overflow-hidden hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeQuickView()"></div>
+        <div class="relative bg-brand-dark border-2 border-brand-lime max-w-2xl w-full p-6 sm:p-8 z-10 brutal-shadow-white">
+            <button onclick="closeQuickView()" class="absolute top-4 right-4 text-white hover:text-brand-lime text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+                <img id="qv-img" src="" alt="Product" class="w-full h-72 object-cover border border-brand-gray filter contrast-110">
+                <div class="space-y-4">
+                    <div class="text-xs text-brand-lime font-brutal uppercase tracking-wider">KONTROL Drop</div>
+                    <h3 id="qv-title" class="font-brutal text-2xl uppercase tracking-tight text-white">Product Name</h3>
+                    <div id="qv-price" class="font-brutal text-xl text-brand-lime">₱0</div>
+                    <p class="text-brand-light/60 text-sm">Piliin ang iyong sukat bago mag-add sa cart.</p>
+                    <div class="flex gap-2 font-brutal text-xs">
+                        <button class="bg-brand-black text-white px-3 py-2 border border-brand-gray hover:border-brand-lime">S</button>
+                        <button class="bg-brand-black text-white px-3 py-2 border border-brand-gray hover:border-brand-lime">M</button>
+                        <button class="bg-brand-black text-white px-3 py-2 border border-brand-gray hover:border-brand-lime">L</button>
+                        <button class="bg-brand-black text-white px-3 py-2 border border-brand-gray hover:border-brand-lime">XL</button>
+                    </div>
+                    <button id="qv-add-btn" class="w-full bg-brand-lime text-brand-black font-brutal py-3 border-2 border-brand-black brutal-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all uppercase text-xs">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="fixed inset-0 z-50 bg-brand-black/95 flex flex-col items-center justify-center p-4 hidden">
+        <button onclick="toggleSearch()" class="absolute top-6 right-6 text-white hover:text-brand-lime text-3xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="w-full max-w-2xl text-center space-y-6">
+            <h3 class="font-brutal text-2xl uppercase text-white">Maghanap ng Produkto</h3>
+            <div class="relative">
+                <input type="text" placeholder="I-type ang pangalan (hal. Hoodie, Tee)..." class="w-full bg-brand-dark text-white font-sans text-lg px-6 py-4 border-2 border-brand-gray focus:border-brand-lime focus:outline-none">
+                <i class="fa-solid fa-magnifying-glass absolute right-5 top-1/2 transform -translate-y-1/2 text-brand-lime text-xl"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brand-lime text-brand-black font-brutal px-6 py-3 border-2 border-brand-black brutal-shadow transform translate-y-32 transition-transform duration-300 flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-xl"></i>
+        <span id="toast-message">Matagumpay na naidagdag sa cart!</span>
+    </div>
+
+    <script>
+        // Cart State
+        let cart = [];
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleSearch() {
+            const search = document.getElementById('search-modal');
+            search.classList.toggle('hidden');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const msgEl = document.getElementById('toast-message');
+            msgEl.innerText = message;
+            toast.classList.remove('translate-y-32');
+            setTimeout(() => {
+                toast.classList.add('translate-y-32');
+            }, 3000);
+        }
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCartUI();
+            showToast(`${name} naidagdag sa cart!`);
+        }
+
+        function updateCartUI() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.innerText = totalItems;
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `
+                    <div id="empty-cart-message" class="text-center py-12 text-brand-light/50 font-sans">
+                        <i class="fa-solid fa-cart-shopping text-4xl mb-3"></i>
+                        <p>Walang laman ang iyong cart.</p>
+                    </div>
+                `;
+                cartTotal.innerText = '₱0';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price * item.quantity;
+                html += `
+                    <div class="flex items-center justify-between bg-brand-black p-4 border border-brand-gray">
+                        <div>
+                            <h4 class="font-brutal text-sm text-white uppercase">${item.name}</h4>
+                            <p class="text-xs text-brand-lime font-brutal mt-1">₱${item.price.toLocaleString()} x ${item.quantity}</p>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-brand-light/50 hover:text-red-500 transition-colors">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+            });
+
+            cartItemsContainer.innerHTML = html;
+            cartTotal.innerText = `₱${total.toLocaleString()}`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+            showToast("Naalis ang item sa cart.");
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                showToast("Walang laman ang iyong cart!");
+                return;
+            }
+            alert("Salamat! Ang iyong order ay pinoproseso na.");
+            cart = [];
+            updateCartUI();
+            toggleCart();
+        }
+
+        // Quick View Modal
+        function quickView(name, price, img) {
+            document.getElementById('qv-title').innerText = name;
+            document.getElementById('qv-price').innerText = price;
+            document.getElementById('qv-img').src = img;
+            
+            const numericPrice = parseInt(price.replace('₱', '').replace(',', ''));
+            const addBtn = document.getElementById('qv-add-btn');
+            addBtn.onclick = function() {
+                addToCart(name, numericPrice);
+                closeQuickView();
+            };
+
+            document.getElementById('quick-view-modal').classList.remove('hidden');
+        }
+
+        function closeQuickView() {
+            document.getElementById('quick-view-modal').classList.add('hidden');
+        }
+
+        // Product Filtering
+        function filterProducts(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-lime', 'text-brand-black', 'active');
+                btn.classList.add('bg-brand-dark', 'text-white');
+            });
+
+            event.target.classList.remove('bg-brand-dark', 'text-white');
+            event.target.classList.add('bg-brand-lime', 'text-brand-black', 'active');
+
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Newsletter Subscription
+        function subscribeNewsletter(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            if(email) {
+                showToast("Salamat sa pag-subscribe sa susunod na drop!");
+                document.getElementById('newsletter-email').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
